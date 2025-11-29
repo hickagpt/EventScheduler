@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EventScheduler.Abstractions\EventScheduler.Abstractions.csproj" />
+    <PackageReference Include="SimpleEventScheduler.Abstractions" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
