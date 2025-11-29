@@ -21,7 +21,7 @@ A lightweight, high-performance .NET library for scheduling timed events with co
 
 ### NuGet Package (Coming Soon)
 ```bash
-dotnet add package SimpleEventScheduler --version 1.0.0
+dotnet add package SimpleEventScheduler
 ```
 
 ### Build from Source
