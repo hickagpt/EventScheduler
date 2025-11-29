@@ -14,7 +14,6 @@ public static class TestHelpers
             .SetScheduledTime(scheduledTime)
             .SetRunAction(runAction ?? (_ => { }))
             .SetWarningBefore(warningBefore)
-            .SetIsDueFunc(world => world.CurrentTime >= scheduledTime)
             .Build();
     }
 
@@ -29,7 +28,6 @@ public static class TestHelpers
             .SetWarningBefore(warningBefore)
             .SetRunAction(runAction ?? (_ => { }))
             .SetRunWarningAction(warningAction ?? (_ => { }))
-            .SetIsDueFunc(world => world.CurrentTime >= scheduledTime)
             .Build();
     }
 }

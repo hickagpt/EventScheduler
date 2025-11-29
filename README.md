@@ -56,7 +56,6 @@ var eventId = scheduler.ScheduleEvent(
         .SetScheduledTime(futureTime)
         .SetName("Player Spawn")
         .SetRunAction(world => Console.WriteLine("Player spawned!"))
-        .SetIsDueFunc(world => world.CurrentTime >= futureTime)
         .Build()
 );
 
@@ -75,7 +74,6 @@ var missionEvent = new ScheduledEvent<GameTimeProvider>.Builder()
     .SetWarningBefore(TimeSpan.FromMinutes(1)) // Warn 1 minute before
     .SetRunAction(world => StartMission(world))
     .SetRunWarningAction(world => ShowMissionWarning(world))
-    .SetIsDueFunc(world => world.CurrentTime >= missionTime)
     .Build();
 
 // Schedule the event
@@ -158,7 +156,6 @@ var event = new ScheduledEvent<MyWorld>.Builder()
     .SetWarningBefore(TimeSpan.FromMinutes(5))
     .SetRunAction(world => PerformBackup(world))
     .SetRunWarningAction(world => NotifyUsers(world))
-    .SetIsDueFunc(world => world.CurrentTime >= scheduledTime)
     .Build();
 ```
 

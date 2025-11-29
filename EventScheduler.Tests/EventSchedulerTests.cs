@@ -473,7 +473,6 @@ public class ScheduledEventTests
             .SetName("Test Event")
             .SetDescription("Test Description")
             .SetRunAction(_ => executed = true)
-            .SetIsDueFunc(world => world.CurrentTime >= scheduledTime)
             .Build();
 
         // Assert
@@ -496,7 +495,6 @@ public class ScheduledEventTests
             .SetWarningBefore(warningBefore)
             .SetRunAction(_ => { })
             .SetRunWarningAction(_ => { })
-            .SetIsDueFunc(world => world.CurrentTime >= scheduledTime)
             .Build();
 
         // Assert
@@ -641,7 +639,6 @@ public class ScheduledEventTests
             .SetWarningBefore(TimeSpan.FromMinutes(5))
             .SetRunAction(_ => { })
             .SetRunWarningAction(_ => { })
-            .SetIsDueFunc(world => true)
             .Build();
 
         // Act
