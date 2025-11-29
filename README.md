@@ -26,7 +26,7 @@ A lightweight, high-performance .NET library for scheduling timed events with co
 
 ### Build from Source
 ```bash
-git clone https://github.com/yourusername/eventscheduler.git
+git clone https://github.com/hickagpt/EventScheduler.git
 cd eventscheduler
 dotnet build EventScheduler.sln
 ```
