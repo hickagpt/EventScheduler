@@ -3,7 +3,31 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <Title>Simple Event Scheduler</Title>
+    <Authors>cerealdj</Authors>
+    <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/hickagpt/EventScheduler</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>events, scheduling, scheduler</PackageTags>
+    <PackageOutputPath>$(OutputPath)</PackageOutputPath>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Product>SimpleEventScheduler</Product>
+    <PackageId>SimpleEventScheduler</PackageId>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Version>1.0.1</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\NUGET_README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EventScheduler.Abstractions\EventScheduler.Abstractions.csproj" />

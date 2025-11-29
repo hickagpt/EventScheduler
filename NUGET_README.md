@@ -17,20 +17,6 @@ A lightweight, high-performance .NET library for scheduling timed events with co
 - **📊 Observer Pattern**: Event execution notifications and callbacks
 - **✅ 98.5% Test Coverage**: Comprehensive unit and integration tests
 
-## 📦 Installation
-
-### NuGet Package (Coming Soon)
-```bash
-dotnet add package SimpleEventScheduler --version 1.0.0
-```
-
-### Build from Source
-```bash
-git clone https://github.com/hickagpt/EventScheduler.git
-cd eventscheduler
-dotnet build EventScheduler.sln
-```
-
 ## 🚀 Quick Start
 
 ### Basic Event Scheduling
