@@ -16,11 +16,10 @@ namespace EventScheduler
         public bool IsWarningSent => _warningSent;
 
         private bool _warningSent = false;
-        Func<TWorld, bool>? _isDueFunc;
         Action<TWorld>? _runAction;
         Action<TWorld>? _runWarningAction;
 
-        public bool IsDue(TWorld dateTimeProvider) => _isDueFunc?.Invoke(dateTimeProvider) ?? false;
+        public bool IsDue(TWorld dateTimeProvider) => dateTimeProvider.CurrentTime >= ScheduledTime;
 
         public void Run(TWorld world) => _runAction?.Invoke(world);
 
@@ -70,11 +69,7 @@ namespace EventScheduler
                 _scheduledEvent.WarningBefore = warningBefore;
                 return this;
             }
-            public Builder SetIsDueFunc(Func<TWorld, bool> isDueFunc)
-            {
-                _scheduledEvent._isDueFunc = isDueFunc;
-                return this;
-            }
+            
             public Builder SetRunAction(Action<TWorld> runAction)
             {
                 _scheduledEvent._runAction = runAction;
@@ -97,7 +92,6 @@ namespace EventScheduler
                 _scheduledEvent.Description = se.Description;
                 _scheduledEvent.ScheduledTime = se.ScheduledTime;
                 _scheduledEvent.WarningBefore = se.WarningBefore;
-                _scheduledEvent._isDueFunc = se._isDueFunc;
                 _scheduledEvent._runAction = se._runAction;
                 _scheduledEvent._runWarningAction = se._runWarningAction;
 
