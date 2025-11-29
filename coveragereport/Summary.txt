@@ -1,0 +1,27 @@
+Summary
+  Generated on: 29/11/2025 - 09:01:57
+  Coverage date: 29/11/2025 - 08:53:45 - 29/11/2025 - 09:01:56
+  Parser: MultiReport (6x Cobertura)
+  Assemblies: 2
+  Classes: 3
+  Files: 3
+  Line coverage: 98.5%
+  Covered lines: 133
+  Uncovered lines: 2
+  Coverable lines: 135
+  Total lines: 215
+  Branch coverage: 90.4% (38 of 42)
+  Covered branches: 38
+  Total branches: 42
+  Method coverage: 100% (34 of 34)
+  Full method coverage: 97% (33 of 34)
+  Covered methods: 34
+  Fully covered methods: 33
+  Total methods: 34
+
+EventScheduler                                                98.4%
+  EventScheduler.EventScheduler<T>                             100%
+  EventScheduler.ScheduledEvent<T>                            97.1%
+
+EventScheduler.Abstractions                                    100%
+  EventScheduler.Abstractions.ScheduledEventRunEventArgs<T>    100%
